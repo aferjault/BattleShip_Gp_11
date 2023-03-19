@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="Battleship_project.RulesPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Battleship_project"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Width="1000"
+    Height="500"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <TextBlock HorizontalAlignment="Center" Text="Les Règles du jeu " VerticalAlignment="Top" FontSize="34"/>
+        <Button Content="RETOUR" Width ="150" Height ="50" VerticalAlignment="Top" Click="Retour_Click"/>
+
+
+        <StackPanel HorizontalAlignment="Right" Margin="0,100,100,0">
+            <TextBlock Text="Choix du niveau de difficulté..."  Margin="5" />
+            <RadioButton x:Name="Facile" Margin="5" Checked="HandleCheck"
+     GroupName="First Group" Content="Facile" />
+            <RadioButton x:Name="Intermediaire" Margin="5" Checked="HandleCheck"
+     GroupName="First Group" Content="Intermediaire" />
+            <RadioButton x:Name="Difficile" Margin="5" Checked="HandleCheck"
+     GroupName="First Group" Content="Difficile" />
+        </StackPanel>
+
+        <Button Content="Start" Width ="150" Height ="50" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="Start_Click" Margin="0,0,50,25"/>
+
+
+        <Frame x:Name="frame"></Frame>
+    </Grid>
+</Page>
