@@ -14,7 +14,6 @@
         <TextBlock HorizontalAlignment="Center" Text="Les Règles du jeu " VerticalAlignment="Top" FontSize="34"/>
         <Button Content="RETOUR" Width ="150" Height ="50" VerticalAlignment="Top" Click="Retour_Click"/>
 
-
         <StackPanel HorizontalAlignment="Right" Margin="0,100,100,0">
             <TextBlock Text="Choix du niveau de difficulté..."  Margin="5" />
             <RadioButton x:Name="Facile" Margin="5" Checked="HandleCheck"
