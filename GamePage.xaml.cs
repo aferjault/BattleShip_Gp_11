@@ -215,6 +215,7 @@ namespace Battleship_project
                 }
             }
             //si tout les cellule qui sont bateau sont touché alors le conteur reste à 0 et donc J2 à perdue
+            //On sauvagarde le score et niveau du joueur
             if (cont2 == 0)
             {
                 
@@ -266,6 +267,7 @@ namespace Battleship_project
                 }
             }
             //si tout les cellule qui sont bateau sont touché alors le conteur reste à 0 et donc J1 à perdue
+            //On sauvagarde le score et niveau du joueur
             if (cont1 == 0)
             {
                 ShowMessageDialog("fin", "ordi a gagné vous avez gagné "+Save.Score+" points");
@@ -337,7 +339,7 @@ namespace Battleship_project
         {
             Random random = new Random();
 
-            // regarde le dernié coup
+            // regarde le précédant coup
             var lastCoup = coupsPrecedents.LastOrDefault();
             if (lastCoup != null && lastCoup.IsBoat)
             {
