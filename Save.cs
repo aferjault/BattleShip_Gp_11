@@ -9,6 +9,7 @@ namespace Battleship_project
 {
     public static class Save
     {
+        //permet de sauvegarder des variables entre les pages 
         public static List<Cellule> PoseCell = new List<Cellule>();
 
         public static bool PlacerBateau = true;
