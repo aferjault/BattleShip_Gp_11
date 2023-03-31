@@ -29,7 +29,7 @@ namespace Battleship_project
         public int Y { get; set; }
         public bool IsBoat { get; set; }
         public bool IsHit { get; set; }
-        public bool IsDestroyed { get; set; } // a supprimer
+       
 
         //Constructeur de la cellule qui lui atribue la fonction Cell_Trapped
         public Cellule(int x, int y)
@@ -55,7 +55,7 @@ namespace Battleship_project
             int shoot =(int) stopint.Values["int"];
 
         
-
+            // Mode De Tire pour le GamePage
             if (shoot==1)
             {
                 Cellule cell = sender as Cellule;
@@ -87,7 +87,8 @@ namespace Battleship_project
             }
 
           
-
+            //Mode pour placer les bateaux pour pose PoseBateau
+            
             if (shoot == 0)
             {
                 if (IsHit == false & Save.PlacerBateau)
