@@ -35,13 +35,14 @@ namespace Battleship_project
         public PoserBateau()
         {
             this.InitializeComponent();
+            
             Windows.Storage.ApplicationDataContainer stopint = Windows.Storage.ApplicationData.Current.LocalSettings;
             stopint.Values["int"] = 0;
             Windows.Storage.ApplicationDataContainer posebateauint = Windows.Storage.ApplicationData.Current.LocalSettings;
             posebateauint.Values["int"] = 0;
             Save.PlacerBateau = true;
 
-            //Crée les grilles
+            //Crée la grille
             for (int i = 0; i < 10; i++)
             {
                 grillePose.RowDefinitions.Add(new RowDefinition());
@@ -58,7 +59,7 @@ namespace Battleship_project
 
         }
 
-
+        //Enregistre les placements des cellules bateau
         public bool StockData(int bateauLongueur, bool isHorizontal)
         {
             List<Cellule> temp = new List<Cellule>(); //Garde les cellules d'un meme bateau 
@@ -116,6 +117,7 @@ namespace Battleship_project
             await dialog.ShowAsync();
         }
 
+        
         private void Jeu(object sender, RoutedEventArgs e)
         {
             
@@ -149,7 +151,8 @@ namespace Battleship_project
                 frame.Navigate(typeof(GamePage));
             }
         }
-
+        
+        //Gérer si le bateau doit être posé verticalement ou horizontalement
         private void Switch(object sender, RoutedEventArgs e)
         {
            
