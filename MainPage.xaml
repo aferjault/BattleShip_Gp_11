@@ -12,7 +12,7 @@
 
 
     <Grid>
-        <TextBlock HorizontalAlignment="Center" Text="Bienvenu Battleship" VerticalAlignment="Top" FontSize="34"/>
+        <TextBlock HorizontalAlignment="Center" Text="Bienvenue Battleship" VerticalAlignment="Top" FontSize="34"/>
 
         <StackPanel HorizontalAlignment="Center" Margin="0,125,0,0">
             <Button Name ="Play" HorizontalAlignment="Center" Width="200" Click="Play_Click">Play</Button>

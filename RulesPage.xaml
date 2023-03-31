@@ -24,8 +24,31 @@
      GroupName="First Group" Content="Difficile" />
         </StackPanel>
 
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Margin="71,90,0,0" Height="323" Width="594">
+            <TextBlock  TextWrapping="Wrap" Width="583" Text="La bataille navale est un jeu de société dans lequel vous placez des « navires » sur une grille tenue secrète et tentez de « toucher » les navires adverses. " />
+
+            <TextBlock Text="La grille de gauche représente la zone contenant sa propre flotte. Au début du jeu, placez vos navires sur votre grille.
+La grille de droite représente la zone adverse, où vous devrez couler la flotte ennemie. "  TextWrapping="Wrap" Width="583" Height="60" Margin="0,20,0,0"/>
+
+            <TextBlock Text="Sélectionnez une des cases de la grille adverse en tentant de toucher l'ennemi, puis appuyez sur «Confirmer». "  TextWrapping="Wrap" Width="583" Height="52" Margin="0,15,0,0"/>
+
+            <TextBlock Text="Lorsqu'un tir tombe dans l'eau, la case apparaît BLEUE."  TextWrapping="Wrap" Width="583" Height="31" />
+
+            <TextBlock Text="Lorsqu'un tir touche un bateau, la case apparaît ROUGE. "  TextWrapping="Wrap" Width="583" Height="29" />
+
+            <TextBlock Text="Votre but est de couler tous les navires de l'adversaire avant que les vôtres ne le soient. "  TextWrapping="Wrap" Width="583" Height="28"/>
+
+            <TextBlock Text="Maintenant, choisissez votre niveau de difficulté et que la partie commence moussaillon ! "  TextWrapping="Wrap" Width="583" Height="30" />
+
+
+        </StackPanel>
+
         <Button Content="Start" Width ="150" Height ="50" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="Start_Click" Margin="0,0,50,25"/>
 
+
+        <TextBlock Text="Entrez votre nom :" FontSize="20" Margin="10,419,790,58" />
+        <TextBox x:Name="NomTextBox" PlaceholderText="Saisissez votre nom ici" Margin="10,445,781,25" Text="" />
+        <Button Content="Valider" Click="Valider_Click" Margin="224,445,0,0" VerticalAlignment="Top" />
 
         <Frame x:Name="frame"></Frame>
     </Grid>

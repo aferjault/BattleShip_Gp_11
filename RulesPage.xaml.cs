@@ -22,6 +22,7 @@ namespace Battleship_project
     /// </summary>
     public sealed partial class RulesPage : Page
     {
+        public bool NomValide = false;
         public RulesPage()
         {
             this.InitializeComponent();
@@ -39,7 +40,29 @@ namespace Battleship_project
 
         private void Start_Click(object sender, RoutedEventArgs e)
         {
-            if (Facile.IsChecked == true || Intermediaire.IsChecked == true || Difficile.IsChecked == true) frame.Navigate(typeof(GamePage)); ;
+            if ((Facile.IsChecked == true || Intermediaire.IsChecked == true || Difficile.IsChecked == true) && (NomValide))
+            {
+                if (Facile.IsChecked==true)
+                {
+                    Save.Niveau = 0;
+                }
+                if (Intermediaire.IsChecked == true)
+                {
+                    Save.Niveau = 1;
+                }
+                if (Difficile.IsChecked == true)
+                {
+                    Save.Niveau = 2;
+                }
+                frame.Navigate(typeof(PoserBateau));
+            } 
+        }
+
+        private void Valider_Click(object sender, RoutedEventArgs e)
+        {
+            string nom = NomTextBox.Text;
+            Save.NomJoueur= nom;
+            NomValide = true;
         }
     }
 }
